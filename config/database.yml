@@ -6,7 +6,10 @@
 #
 default: &default
   adapter: postgresql
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: 5
+  host: <%= ENV['DOCKER_ENV'] ? 'db' : ENV.fetch('PG_HOST', 'localhost') %>
+  port: <%= ENV['PG_PORT'] || '5432' %>
+  username: <%= ENV['PG_USERNAME'] || 'postgres' %>
   timeout: 5000
 
 development:
