@@ -1,7 +1,7 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     if ENV['RACK_ENV'] == 'production'
-      origins ENV['CHJ_DOMAIN']
+      origins 'https://chonghuijia-react.herokuapp.com'
     else
       origins '*'
     end
