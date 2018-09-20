@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_24_094615) do
+ActiveRecord::Schema.define(version: 2018_09_12_113714) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 2018_08_24_094615) do
     t.boolean "is_vaccined"
     t.boolean "is_sterilized"
     t.boolean "is_adopted"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "media", force: :cascade do |t|
+    t.string "url"
+    t.string "type"
+    t.integer "animal_id"
+    t.boolean "is_cover"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
