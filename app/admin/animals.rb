@@ -12,4 +12,8 @@ ActiveAdmin.register Animal do
 #   permitted
 # end
 
+  permit_params :name, :animal_type, :birth_date, :gender, :is_sterilized, :is_vaccined, :description, :is_adopted, :size, :file, media_attributes: [:id, :type, :is_cover, :_destroy]
+
+  form partial: 'form'
+
 end

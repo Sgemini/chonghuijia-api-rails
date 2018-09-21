@@ -1,0 +1,26 @@
+<%= semantic_form_for [:admin, @animal], builder: ActiveAdmin::FormBuilder do |f| %>
+  <%= f.inputs :name => 'Name', class: 'inputs' do %>
+    <%= f.input :name, label: '名字' %>
+    <%= f.input :animal_type, label: '动物种类' %>
+    <%= f.input :birth_date, label: '生日' %>
+    <%= f.input :gender, label: '性别' %>
+    <%= f.input :size, label: '体型', as: :select, collection: ['小型犬', '中型犬', '大型犬'], include_blank: false %>
+    <%= f.input :description, label: '简述' %>
+    <%= f.input :is_vaccined, label: '已打疫苗' %>
+    <%= f.input :is_sterilized, label: '已绝育' %>
+  <% end %>
+  <%= f.inputs do %>
+    <% f.has_many :media, heading: 'Add Media', allow_destroy: true do |medium| %>
+      <% medium.input :type, as: :select, collection: Medium.types, include_blank: false %>
+      <% medium.input :url, as: :hidden %>
+      <li>
+         <label>照片</label>
+         <div class='photo-list'>
+           <img src="<%= medium.try(:url) || '' %>" class='dog-image'/>
+           <%= f.file_field :file, class: 'avatar-select hidden', accept: '.jpg, .jpeg, .png, .gif, .bmp', multiple: true %>
+          </div>
+      </li>
+    <% end %>
+  <% end %>
+  <%= f.actions %>
+<% end %>
