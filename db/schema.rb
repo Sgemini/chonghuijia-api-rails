@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_20_092730) do
+ActiveRecord::Schema.define(version: 2018_09_26_064421) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2018_09_20_092730) do
 
   create_table "media", force: :cascade do |t|
     t.string "url"
-    t.string "type"
+    t.string "medium_type"
     t.integer "animal_id"
     t.boolean "is_cover"
     t.datetime "created_at", null: false

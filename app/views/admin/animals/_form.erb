@@ -11,13 +11,14 @@
   <% end %>
   <%= f.inputs do %>
     <% f.has_many :media, heading: 'Add Media', allow_destroy: true do |medium| %>
-      <% medium.input :type, as: :select, collection: Medium.types, include_blank: false %>
+      <% medium.input :medium_type, as: :select, collection: ['photo', 'video'], include_blank: false %>
+      <% medium.input :is_cover, as: :boolean %>
       <% medium.input :url, as: :hidden %>
       <li>
          <label>照片</label>
          <div class='photo-list'>
-           <img src="<%= medium.try(:url) || '' %>" class='dog-image'/>
-           <%= f.file_field :file, class: 'avatar-select hidden', accept: '.jpg, .jpeg, .png, .gif, .bmp', multiple: true %>
+            <img src="<%= @animal.media[medium.index.to_i].url || '' %>" class='dog-image'/>
+            <%= f.file_field :file, class: 'avatar-select hidden', accept: '.jpg, .jpeg, .png, .gif, .bmp', multiple: true %>
           </div>
       </li>
     <% end %>
