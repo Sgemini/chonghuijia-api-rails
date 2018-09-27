@@ -2,6 +2,12 @@ class Medium < ApplicationRecord
   belongs_to :animal
 
   after_destroy :destory_upload_image
+  after_save :update_cover
+
+  def update_cover
+    return unless is_cover
+    animal.update!(cover_url: url)
+  end
 
   def destory_upload_image
     bucket = 'dogadopt' # 要上传的空间

@@ -12,12 +12,12 @@
   <%= f.inputs do %>
     <% f.has_many :media, heading: 'Add Media', allow_destroy: true do |medium| %>
       <% medium.input :medium_type, as: :select, collection: ['photo', 'video'], include_blank: false %>
-      <% medium.input :is_cover, as: :boolean %>
+      <% medium.input :is_cover, as: :boolean, input_html: { class: 'is-cover' } %>
       <% medium.input :url, as: :hidden %>
       <li>
          <label>照片</label>
          <div class='photo-list'>
-            <img src="<%= @animal.media[medium.index.to_i].url || '' %>" class='dog-image'/>
+            <img src="<%= @animal.media[medium.index.to_i].try(:url) || '' %>" class='dog-image'/>
             <%= f.file_field :file, class: 'avatar-select hidden', accept: '.jpg, .jpeg, .png, .gif, .bmp', multiple: true %>
           </div>
       </li>

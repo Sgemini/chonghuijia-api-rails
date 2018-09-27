@@ -51,7 +51,6 @@ ActiveAdmin.register Animal do
           bucket: bucket
         )
         url = qiniu_domain + key
-        puts url
         animal.media.create(url: url, is_cover: params[:animal][:media_attributes][index.to_s][:is_cover], medium_type: params[:animal][:media_attributes][index.to_s][:medium_type]) # 新建一条type为photo，url为七牛云的图片外链的数据
       end
       params[:animal][:media_attributes] = nil
