@@ -12,7 +12,7 @@ ActiveAdmin.register Animal do
 #   permitted
 # end
 
-  permit_params :name, :animal_type, :birth_date, :gender, :is_sterilized, :is_vaccined, :description, :is_adopted, :size, :file, media_attributes: [:id, :type, :is_cover, :_destroy]
+  permit_params :name, :animal_type, :birth_date, :gender, :is_sterilized, :is_vaccined, :description, :is_adopted, :cover_url, :size, :file, media_attributes: [:id, :type, :is_cover, :_destroy]
 
   form partial: 'form'
 
@@ -51,7 +51,9 @@ ActiveAdmin.register Animal do
           bucket: bucket
         )
         url = qiniu_domain + key
-        animal.media.create(url: url, is_cover: params[:animal][:media_attributes][index.to_s][:is_cover], medium_type: params[:animal][:media_attributes][index.to_s][:medium_type]) # 新建一条type为photo，url为七牛云的图片外链的数据
+        is_cover = params[:animal][:media_attributes][index.to_s][:is_cover]
+        params[:animal][:cover_url] = url if is_cover
+        animal.media.create(url: url, is_cover: is_cover, medium_type: params[:animal][:media_attributes][index.to_s][:medium_type]) # 新建一条type为photo，url为七牛云的图片外链的数据
       end
       params[:animal][:media_attributes] = nil
     end

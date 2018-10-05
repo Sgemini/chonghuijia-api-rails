@@ -1,7 +1,7 @@
 <%= semantic_form_for [:admin, @animal], builder: ActiveAdmin::FormBuilder do |f| %>
   <%= f.inputs :name => 'Name', class: 'inputs' do %>
     <%= f.input :name, label: '名字' %>
-    <%= f.input :animal_type, label: '动物种类' %>
+    <%= f.input :animal_type, label: '动物种类', include_blank: false %>
     <%= f.input :birth_date, label: '生日' %>
     <%= f.input :gender, label: '性别' %>
     <%= f.input :size, label: '体型', as: :select, collection: ['小型犬', '中型犬', '大型犬'], include_blank: false %>
@@ -12,7 +12,7 @@
   <%= f.inputs do %>
     <% f.has_many :media, heading: 'Add Media', allow_destroy: true do |medium| %>
       <% medium.input :medium_type, as: :select, collection: ['photo', 'video'], include_blank: false %>
-      <% medium.input :is_cover, as: :boolean, input_html: { class: 'is-cover' } %>
+      <% medium.input :is_cover, label: '封面', as: :boolean, input_html: { class: 'is-cover' } %>
       <% medium.input :url, as: :hidden %>
       <li>
          <label>照片</label>
