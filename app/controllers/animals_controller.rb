@@ -6,7 +6,7 @@ class AnimalsController < ApplicationController
   end
 
   def show
-    animal = Animal.find_by(id: params[:id])
+    animal = Animal.find_by!(id: params[:id])
     render status: 200, json: { animal: animal }
   end
 end
