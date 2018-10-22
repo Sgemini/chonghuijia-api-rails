@@ -11,3 +11,6 @@ $ ->
         $('.is-cover').each (index, item) ->
             item.checked = ''
         this.checked = 'checked'
+    $(document).on 'click', '.has_many_add', ->
+        $newMedia = $(this).parent().find('.dog-image').last()
+        $newMedia.attr('src', '')
