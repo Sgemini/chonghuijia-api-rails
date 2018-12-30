@@ -11,19 +11,5 @@
     <%= f.input :cover_url, label: '封面链接' %>
     <%= f.input :is_adopted, label: '已领养' %>
   <% end %>
-  <%= f.inputs do %>
-    <% f.has_many :media, heading: 'Add Media', allow_destroy: true do |medium| %>
-      <% medium.input :medium_type, as: :select, collection: ['photo', 'video'], include_blank: false %>
-      <% medium.input :is_cover, label: '封面', as: :boolean, input_html: { class: 'is-cover' } %>
-      <% medium.input :url, as: :hidden %>
-      <li>
-         <label>照片</label>
-         <div class='photo-list'>
-            <img src="<%= @animal.media[medium.index.to_i].try(:url) || '' %>" class='dog-image'/>
-            <%= f.file_field :file, class: 'avatar-select hidden', accept: '.jpg, .jpeg, .png, .gif, .bmp', multiple: true %>
-          </div>
-      </li>
-    <% end %>
-  <% end %>
   <%= f.actions %>
 <% end %>
