@@ -3,4 +3,6 @@ class Animal < ApplicationRecord
 
   enum gender: [:boy, :girl]
   enum animal_type: [:dog, :cat]
+
+  scope :waiting_for_adopt, -> { where.not(is_adopted: true) }
 end

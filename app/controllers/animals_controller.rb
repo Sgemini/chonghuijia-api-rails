@@ -1,7 +1,7 @@
 class AnimalsController < ApplicationController
 
   def index
-    animals = Animal.all
+    animals = Animal.waiting_for_adopt
     render status: 200, json: { animals: animals }
   end
 
