@@ -6,5 +6,10 @@ RSpec.describe AnimalsController, type: :controller do
       get :index
       expect(response.status).to eq 200
     end
+
+    it 'search should retrurn 200' do
+      get :index, params: { search: true }
+      expect(response.status).to eq 200
+    end
   end
 end
