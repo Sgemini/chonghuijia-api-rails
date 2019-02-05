@@ -33,7 +33,7 @@ dogs = [
     name: '排骨',
     gender: 0,
     is_vaccined: true,
-    is_sterilized: false,
+    is_sterilized: true,
     size: 'medium',
     description: '非常听话，不吵闹，非常渴望你的抚摸。',
     is_adopted: false
@@ -56,17 +56,7 @@ dogs = [
     is_sterilized: true,
     size: 'medium',
     description: '对人友善，亲人，喜欢和狗狗一起玩耍（曾得过狗瘟，现已痊愈，但腿有轻微的稍震）。',
-    is_adopted: false
-  },
-
-  {
-    name: '蛋黄',
-    gender: 0,
-    is_vaccined: true,
-    is_sterilized: true,
-    size: 'medium',
-    description: '非常忠心的狗狗，听话，有跟随技能。',
-    is_adopted: false
+    is_adopted: true
   },
 
   {
@@ -80,7 +70,7 @@ dogs = [
   },
 
   {
-    name: '黑妹',
+    name: '黑妹(527)',
     gender: 1,
     is_vaccined: true,
     is_sterilized: true,
@@ -104,7 +94,7 @@ dogs = [
     gender: 1,
     is_vaccined: true,
     is_sterilized: true,
-    size: 'medium',
+    size: 'big',
     description: '非常忠心有性格的狗狗，稍微怕陌生人，属于美式秋田犬。',
     is_adopted: false
   },
@@ -114,7 +104,7 @@ dogs = [
     gender: 0,
     is_vaccined: true,
     is_sterilized: false,
-    size: 'small',
+    size: 'medium',
     description: '爱吃东西，喜欢玩照吃游戏，活泼。',
     is_adopted: false
   },
@@ -143,9 +133,9 @@ dogs = [
     name: '黑仔',
     gender: 0,
     is_vaccined: true,
-    is_sterilized: false,
+    is_sterilized: true,
     size: 'medium',
-    description: '乖，对人友善。',
+    description: '乖，对熟人友善。',
     is_adopted: false
   },
 
@@ -163,7 +153,7 @@ dogs = [
     name: 'Beauty',
     gender: 1,
     is_vaccined: true,
-    is_sterilized: false,
+    is_sterilized: true,
     size: 'medium',
     description: '曾经的越狱大王，现在性格渐趋稳定，不喜欢大部分的母狗，适合独养。',
     is_adopted: false
@@ -206,7 +196,7 @@ dogs = [
     is_sterilized: false,
     size: 'medium',
     description: '调皮好动，亲人，喜欢外出，爱干净。',
-    is_adopted: false
+    is_adopted: true
   },
 
   {
@@ -226,24 +216,24 @@ dogs = [
     is_sterilized: true,
     size: 'medium',
     description: '跟人打招呼直接干脆，抱抱躺下求扫肚子。上街活泼狂野，不爱叫。',
-    is_adopted: false
+    is_adopted: true
   },
 
   {
     name: '咸湿仔',
     gender: 0,
     is_vaccined: true,
-    is_sterilized: false,
+    is_sterilized: true,
     size: 'medium',
     description: '因为混有斗牛梗和比特犬的血统，对故意挑衅的狗攻击性很强，对人类却是完全一颗小孩子的心，爱逛街和爱无尽的撒娇。',
-    is_adopted: false
+    is_adopted: true
   },
 
   {
     name: '咖啡',
     gender: 0,
     is_vaccined: true,
-    is_sterilized: false,
+    is_sterilized: true,
     size: 'medium',
     description: '有着优良中华田园犬的特质，对主人温和忠心，看家护院起来坚定不妥协。',
     is_adopted: false
@@ -306,7 +296,7 @@ dogs = [
     is_sterilized: false,
     size: 'medium',
     description: '越长越可爱的小伙子，身上还是BB般的绒毛，爱滚草地，义工们争相溜达的主角。',
-    is_adopted: false
+    is_adopted: true
   },
 
   {
@@ -426,7 +416,7 @@ dogs = [
     is_sterilized: false,
     size: 'medium',
     description: '性格斯文淡定(除了见到猫)，躺下时永远交叉双手，听话不爱叫，完美的陪伴犬。',
-    is_adopted: false
+    is_adopted: true
   },
 
   {
@@ -437,7 +427,137 @@ dogs = [
     size: 'small',
     description: '蝴蝶犬串，有点害羞，还在适应阶段。',
     is_adopted: false
+  },
+
+  {
+    name: '大哥',
+    gender: 0,
+    is_vaccined: true,
+    is_sterilized: true,
+    size: 'medium',
+    description: '我是大哥',
+    is_adopted: false
+  },
+
+  {
+    name: '太后',
+    gender: 1,
+    is_vaccined: true,
+    is_sterilized: true,
+    size: 'medium',
+    description: '我是太后',
+    is_adopted: false
   }
+
+  # {
+  #   name: '嘎仔',
+  #   gender: 0,
+  #   is_vaccined: true,
+  #   is_sterilized: false,
+  #   size: 'medium',
+  #   description: '开朗亲人，是个安静的美男子，喜欢上街，自带握手技能。',
+  #   is_adopted: false
+  # },
+
+  # {
+  #   name: '嘎仔',
+  #   gender: 0,
+  #   is_vaccined: true,
+  #   is_sterilized: false,
+  #   size: 'medium',
+  #   description: '开朗亲人，是个安静的美男子，喜欢上街，自带握手技能。',
+  #   is_adopted: false
+  # },
+
+  # {
+  #   name: '嘎仔',
+  #   gender: 0,
+  #   is_vaccined: true,
+  #   is_sterilized: false,
+  #   size: 'medium',
+  #   description: '开朗亲人，是个安静的美男子，喜欢上街，自带握手技能。',
+  #   is_adopted: false
+  # },
+
+  # {
+  #   name: '嘎仔',
+  #   gender: 0,
+  #   is_vaccined: true,
+  #   is_sterilized: false,
+  #   size: 'medium',
+  #   description: '开朗亲人，是个安静的美男子，喜欢上街，自带握手技能。',
+  #   is_adopted: false
+  # },
+
+  # {
+  #   name: '嘎仔',
+  #   gender: 0,
+  #   is_vaccined: true,
+  #   is_sterilized: false,
+  #   size: 'medium',
+  #   description: '开朗亲人，是个安静的美男子，喜欢上街，自带握手技能。',
+  #   is_adopted: false
+  # },
+
+  # {
+  #   name: '嘎仔',
+  #   gender: 0,
+  #   is_vaccined: true,
+  #   is_sterilized: false,
+  #   size: 'medium',
+  #   description: '开朗亲人，是个安静的美男子，喜欢上街，自带握手技能。',
+  #   is_adopted: false
+  # },
+
+  # {
+  #   name: '嘎仔',
+  #   gender: 0,
+  #   is_vaccined: true,
+  #   is_sterilized: false,
+  #   size: 'medium',
+  #   description: '开朗亲人，是个安静的美男子，喜欢上街，自带握手技能。',
+  #   is_adopted: false
+  # },
+
+  # {
+  #   name: '嘎仔',
+  #   gender: 0,
+  #   is_vaccined: true,
+  #   is_sterilized: false,
+  #   size: 'medium',
+  #   description: '开朗亲人，是个安静的美男子，喜欢上街，自带握手技能。',
+  #   is_adopted: false
+  # },
+
+  # {
+  #   name: '嘎仔',
+  #   gender: 0,
+  #   is_vaccined: true,
+  #   is_sterilized: false,
+  #   size: 'medium',
+  #   description: '开朗亲人，是个安静的美男子，喜欢上街，自带握手技能。',
+  #   is_adopted: false
+  # },
+
+  # {
+  #   name: '嘎仔',
+  #   gender: 0,
+  #   is_vaccined: true,
+  #   is_sterilized: false,
+  #   size: 'medium',
+  #   description: '开朗亲人，是个安静的美男子，喜欢上街，自带握手技能。',
+  #   is_adopted: false
+  # },
+
+  # {
+  #   name: '嘎仔',
+  #   gender: 0,
+  #   is_vaccined: true,
+  #   is_sterilized: false,
+  #   size: 'medium',
+  #   description: '开朗亲人，是个安静的美男子，喜欢上街，自带握手技能。',
+  #   is_adopted: false
+  # }
 ]
 
 dogs.each do |d|
