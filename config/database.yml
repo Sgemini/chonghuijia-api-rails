@@ -9,7 +9,7 @@ default: &default
   pool: 5
   host: <%= ENV['DOCKER_ENV'] ? 'db' : ENV.fetch('PG_HOST', 'localhost') %>
   port: <%= ENV['PG_PORT'] || '5432' %>
-  username: <%= ENV['PG_USERNAME'] || 'postgres' %>
+  username: <%= ENV['PG_USERNAME'] || '' %>
   timeout: 5000
 
 development:
