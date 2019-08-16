@@ -4,7 +4,7 @@
     <%= f.input :animal_type, label: '动物种类', include_blank: false %>
     <%= f.input :birth_date, label: '生日' %>
     <%= f.input :gender, label: '性别' %>
-    <%= f.input :size, label: '体型', as: :select, collection: ['small', 'medium', 'big'], include_blank: false, value: f.try(:size) %>
+    <%= f.input :size, label: '体型', as: :select, collection: ['小型犬', '中型犬', '大型犬'], include_blank: false, value: f.try(:size) %>
     <%= f.input :description, label: '简述' %>
     <%= f.input :is_vaccined, label: '已打疫苗' %>
     <%= f.input :is_sterilized, label: '已绝育' %>
