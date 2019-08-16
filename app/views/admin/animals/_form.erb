@@ -1,7 +1,7 @@
 <%= semantic_form_for [:admin, @animal], builder: ActiveAdmin::FormBuilder do |f| %>
   <%= f.inputs :name => 'Name', class: 'inputs' do %>
     <%= f.input :name, label: '名字' %>
-    <%= f.input :animal_type, label: '动物种类', include_blank: false %>
+    <%= f.input :animal_type, label: '动物种类', as: :select, collection: ['狗', '猫'], include_blank: false, value: f.try(:animal_type) %>
     <%= f.input :birth_date, label: '生日' %>
     <%= f.input :gender, label: '性别', as: :select, collection: ['男孩', '女孩'], include_blank: false, value: f.try(:gender) %>
     <%= f.input :size, label: '体型', as: :select, collection: ['小型犬', '中型犬', '大型犬'], include_blank: false, value: f.try(:size) %>
