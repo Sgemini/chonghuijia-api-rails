@@ -11,6 +11,10 @@ class AnimalsController < ApplicationController
     render status: 200, json: { animal: animal }
   end
 
+  def create
+
+  end
+
   private
 
   def animal_params
