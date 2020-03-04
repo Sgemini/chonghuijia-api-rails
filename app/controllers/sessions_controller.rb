@@ -6,9 +6,9 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to root_url, notice: "Logged in!"
+      render status: 200, json: { auth_token: session[:user_id] }
     else
-      flash.now[:alert] = "Email or password is invalid"
+      render status: 400, json: { message: "邮箱或密码错误" }
     end
   end
 
