@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
 	rescue_from ActiveRecord::RecordNotFound, with: :render_404
 	helper_method :current_user
-	protect_from_forgery with: :null_session, unless: ENV['RACK_ENV'] == 'production'
+	protect_from_forgery with: :null_session, unless: -> { ENV['RACK_ENV'] == 'production'}
 
 	def authorize_request
 		header = request.headers['auth_token']
