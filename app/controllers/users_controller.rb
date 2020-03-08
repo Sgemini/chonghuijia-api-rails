@@ -1,5 +1,5 @@
 class UsersController < InheritedResources::Base
-  before_action :current_user
+  before_action :authorize_request
 
   private
 
